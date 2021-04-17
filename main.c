@@ -18,30 +18,30 @@ int bin(int num)
 
 int main(int argc, char *argv[]) {
 	setlocale(0,"rus");
-	printf("СКОЛЬКО ПРЕДМЕТОВ ЛЕЖИТ В РЮКЗАКЕ?: ");
+	printf("РЎРљРћР›Р¬РљРћ РџР Р•Р”РњР•РўРћР’ Р›Р•Р–РРў Р’ Р Р®РљР—РђРљР•?: ");
 	int n;
 	scanf("%d",&n);
-	printf("\n\nВЕС ПРЕДМЕТОВ (КГ): \n\n");
+	printf("\n\nР’Р•РЎ РџР Р•Р”РњР•РўРћР’ (РљР“): \n\n");
 	int i;int a[n];
 	for(i=0;i<n;i++)
 	printf("a[%d]= ",i), scanf("%d",&a[i]);
-	printf("\n\nВВЕДИТЕ ЧИСЛО S: ");int s,ss; scanf("%d",&s);int p;int z;printf("\n\n");int g=0,gc,sum,summax=1000,pos=0,post,shag;
+	printf("\n\nР’Р’Р•Р”РРўР• Р§РРЎР›Рћ S: ");int s,ss; scanf("%d",&s);int p;int z;printf("\n\n");int g=0,gc,sum,summax=1000,pos=0,post,shag;
 	for(i=0;i<n;i++) printf("a[%d]    ",i);
 	printf("\n");
 	
 	int b[n];int j;int k=pow(2,n);
 	for(i=0;i<k;i++){
-		for (j=0;j<n;j++) b[j]=0;//занулл эл-тов Б
-		p=bin(i);//p в двоичн
+		for (j=0;j<n;j++) b[j]=0;//Р·Р°РЅСѓР»Р» СЌР»-С‚РѕРІ Р‘
+		p=bin(i);//p РІ РґРІРѕРёС‡РЅ
 		z=0;ss=0;
 		
-		while (p!=0){ // размещение цифр двоичного числа по массиву
+		while (p!=0){ // СЂР°Р·РјРµС‰РµРЅРёРµ С†РёС„СЂ РґРІРѕРёС‡РЅРѕРіРѕ С‡РёСЃР»Р° РїРѕ РјР°СЃСЃРёРІСѓ
 			b[z]=p%10;
 			p=p/10;
 			z++;
 			
 		}
-		for(z=0;z<n;z++) ss+=a[z]*b[z];//складываем вес всех предметов в сумму ss
+		for(z=0;z<n;z++) ss+=a[z]*b[z];//СЃРєР»Р°РґС‹РІР°РµРј РІРµСЃ РІСЃРµС… РїСЂРµРґРјРµС‚РѕРІ РІ СЃСѓРјРјСѓ ss
 		if (ss==s){
 			sum=0;pos++;
 			for(shag=0;shag<n;shag++) sum+=b[i];
@@ -55,7 +55,7 @@ int main(int argc, char *argv[]) {
 		
 	}
 	post++;
-	printf("\n\nПОЗИЦИЯ САМОГО ОПТИМАЛЬНОГО СПОСОБА: %d",post);
+	printf("\n\nРџРћР—РР¦РРЇ РЎРђРњРћР“Рћ РћРџРўРРњРђР›Р¬РќРћР“Рћ РЎРџРћРЎРћР‘Рђ: %d",post);
 	
 
 	
